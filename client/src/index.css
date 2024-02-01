@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+  body{
+    overflow-x: hidden;
+  }/* Add your existing CSS styles here */
+.custom-dropdown {
+  position: relative;
+  user-select: none;
+}
+
+.selected-option {
+  padding: 10px;
+  border: 1px solid #ccc;
+  color: red;
+  cursor: pointer;
+}
+
+.dropdown-list {
+  display: none;
+  position: absolute;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #ccc;
+  border-top: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-list.visible {
+  display: block;
+}
+
+.dropdown-list li {
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dropdown-list li:hover {
+  background-color: #f0f0f0;
+}
+/* Navbar.module.css */
+
+.flagIcon {
+  width: 30px;
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 8px; /* Add some margin between the image and text */
+}
