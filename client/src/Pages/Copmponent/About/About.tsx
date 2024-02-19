@@ -55,6 +55,7 @@ export function About() {
     return (
         <div className={style.container}>
             {/* 1 */}
+            <div className={style.banner_container}>
             <div className={style.banner}>
                 <div className={style.banner_heading}>
                     <h2>Ready for your second chance?</h2>
@@ -69,6 +70,7 @@ export function About() {
                     <div className={style.banner_img}>
                         <img src={bg} alt='/' />
                     </div>
+                </div>
                 </div>
             </div>
             {/* 2 */}
@@ -92,7 +94,14 @@ export function About() {
                     <p>Danius is a qualified Family Physician, with a post-graduate degree as a Psychotherapist specializing in Cognitive Behavioral Therapy.</p>
                 </div>
                 <div className={style.advisor_img}>
+                    <div>
                     <img src={dainius} alt='/' />
+                    <div className={style.advisor_info}>
+                        <span>Dainius Jakučionis MD</span>
+                        <span>The brains behind Sensa</span>
+                    </div>
+                    </div>
+                   
                 </div>
             </div>
 
@@ -106,21 +115,21 @@ export function About() {
             </div>
 
 
-            <div>
+            <div className={style.vision_statement}>
                 <div>
                     <img src={bean_medi} />
                 </div>
-                <div>
+         
                     <h3>We’re here to change that – and our Vision Statement reflects it:</h3>
                     <h2>"Be the first-hand solution for self-growth and better mental health. Simple."</h2>
-                </div>
+             
 
             </div>
-            <div className={style.advisor_content}>
-                <div className={style.advisor_img}>
+            <div className={style.healthy_habits}>
+                <div className={style.healthy_habits_img}>
                     <img src={features} alt='/' />
                 </div>
-                <div>
+                <div className={style.healthy_habits_text}>
                     <h2>Build healthy habits – one step at a time</h2>
                     <p>By utilizing modern Cognitive Behavioral Therapy (CBT) in an interactive way, Sensa is able to really dig deep into the causes of your problems and provide a personalized plan that helps you get on the right track towards feeling the way you deserve.</p>
                     <button>Check out Sensa's features</button>

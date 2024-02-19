@@ -47,12 +47,12 @@ export function ClientReviews() {
         </div>
         <div className={style.reviewItems}>
           {reviewsOrder.map((reviewId) => {
-            const review = reviewsData[parseInt(reviewId) - 1]; 
+            const review = reviewsData[parseInt(reviewId) - 1];
             return (
               <div key={reviewId} className={style.reviewItem}>
                 <div className={style.reviewItem_text}>
-                  <p>{review.name}</p>
-                  <p>{review.location}</p>
+                  <span>{review.name}</span>
+                  <span>{review.location}</span>
                 </div>
                 <div className={style.stars}>
                   {[...Array(5)].map((_, index) => (

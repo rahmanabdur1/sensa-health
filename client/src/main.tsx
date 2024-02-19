@@ -1,11 +1,11 @@
 // Import necessary modules
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';  // Import createRoot from react-dom/client
 import { BrowserRouter as Router } from 'react-router-dom';
 import { I18nextProvider } from 'react-i18next';
 import i18n from 'i18next';
 import App from './App';
-import  './index.css';
+import './index.css';
 import translationEN from './translatorData/en.json';
 import translationES from './translatorData/es.json';
 import translationPT from './translatorData/pt.json';
@@ -21,8 +21,8 @@ i18n.init({
   },
 });
 
-// Use createRoot instead of ReactDOM.render
-const root = ReactDOM.createRoot(document.getElementById('root'));
+// Use createRoot from react-dom/client
+const root = createRoot(document.getElementById('root'));
 
 // Render the app with Router
 root.render(

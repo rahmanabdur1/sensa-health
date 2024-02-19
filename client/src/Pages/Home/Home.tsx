@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react';
-import { Banner } from '../Banner/Banner';
+import{ useEffect } from 'react';
 import { ClientReviews } from './ClientReviews/ClientReviews';
 import { ImportandOfSansa } from './ImportandOfSansa/ImportandOfSansa';
 import { SensaInfo } from './SensaInfo/SensaInfo';
+import { Banner } from './Banner/Banner';
 
 export function Home() {
   useEffect(() => {
@@ -11,7 +11,7 @@ export function Home() {
 
   return (
     <div>
-      <Banner />
+     <Banner/>
       <SensaInfo />
       <ClientReviews />
       <ImportandOfSansa />

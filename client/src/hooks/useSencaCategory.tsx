@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 interface SencaCategory {
   _id: string;
   name: string;
-  category_id: number;
+  category_name: string;
   image?: string;
 };
 

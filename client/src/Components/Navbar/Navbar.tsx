@@ -5,6 +5,8 @@ import us from '../../assets/images/us.png';
 import spanish from '../../assets/images/spanish.jpg';
 import portuguese from '../../assets/images/portuguese.png';
 import { useTranslation } from 'react-i18next';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleUp,faAngleDown } from '@fortawesome/free-solid-svg-icons';
 
 export function Navbar() {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -55,6 +57,9 @@ export function Navbar() {
     i18n.changeLanguage(language);
   };
 
+
+
+
   return (
     <header>
       {isMenuOpen && (
@@ -77,7 +82,7 @@ export function Navbar() {
             </Link>
           </li>
           <li className={styles.navItem} onClick={closeMenu}>
-            <Link to="/blogs" className={styles.navLink}>
+            <Link to="/employers" className={styles.navLink}>
               {t('navbar.forEmployers')}
             </Link>
           </li>
@@ -87,18 +92,19 @@ export function Navbar() {
             </Link>
           </li>
           <li className={styles.navItem}>
-            <div className="custom-dropdown">
-              <div className="selected-option" onClick={toggleDropdown}>
-                <img src={selectedOption.flag} alt={selectedOption.languagename} width="20px" />
+            <div className={styles.custom_dropdown}>
+              <div className={styles.selected_option} onClick={toggleDropdown}>
+                <img src={selectedOption.flag} alt={selectedOption.languagename}/>
+                {isDropdownVisible ?    <FontAwesomeIcon icon={faAngleUp} /> :    <FontAwesomeIcon icon={faAngleDown} />}
               </div>
-              <ul className={`dropdown-list ${isDropdownVisible && 'visible'}`}>
+              <ul className={`${styles.dropdown_list} ${isDropdownVisible ? styles.visible : ''}`}>
                 {[
                   { language: 'en', languagename:'English', flag: us },
                   { language: 'es',  languagename:'Spanish', flag: spanish },
                   { language: 'pt',  languagename:'Portuguese', flag: portuguese },
                 ].map((option, index) => (
                   <li key={index} onClick={() => selectOption(option)}>
-                    <img src={option.flag} alt={option.language} width="20px" />
+                    <img src={option.flag} alt={option.language} />
                     {option.languagename}
                   </li>
                 ))}

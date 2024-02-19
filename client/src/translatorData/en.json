@@ -15,12 +15,12 @@
 
     "sencaCategory": {
       "loading": "Loading...",
-      "stress / anxiety": "Stress / Anxiety",
+      "stress / anxiety": "Stress/Anxiety",
       "adhd": "ADHD",
       "procrastination": "Procrastination",
       "burnout": "Burnout",
       "self-esteem": "Self-esteem",
-      "fatigue / exhaustion": "Fatigue / Exhaustion",
+      "fatigue / exhaustion": "Fatigue/Exhaustion",
       "social anxiety": "Social Anxiety",
       "ptsd": "PTSD",
       "asd": "ASD",
@@ -59,7 +59,7 @@
     },
     "footer": {
       "heading": "sensa.health",
-      "disclaimer": "Disclaimer: Results may vary due to individual differences...",
+      "disclaimer": "Disclaimer: Results may vary due to individual differences. In addition, mental self-help apps like Sensa are not a replacement for or a form of therapy, nor are they intended to cure, treat, or diagnose medical conditions, including psychiatric conditions. Please consult a qualified health care provider for a medical treatment plan.",
       "rightsReserved": "© 2023 Sensa. All rights reserved.",
       "mySubscription": "My Subscription",
       "contacts": "Contacts",

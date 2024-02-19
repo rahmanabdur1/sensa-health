@@ -1,43 +1,38 @@
-import { useState } from 'react';
-import { useParams } from 'react-router';
+
+import { Link, useNavigate, useParams } from 'react-router-dom';
+import './Procrastination.css';
 import { useQuizData } from '../../hooks/useQuizeData';
+import { useState } from 'react';
 
 export function Procrastination() {
-    const { categoryId } = useParams();
-    const [quizData, error] = useQuizData(Number(categoryId));
-    const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const { categoryId} = useParams();
+  const [quizData, error] = useQuizData(String(categoryId));
+  const [cat]=useState(1)
 
-    if (error) {
-        return <div>Error: {error}</div>;
-    }
 
-    if (!quizData) {
-        return <div>Loading...</div>;
-    }
+  let navigate=useNavigate()
 
-    const hasNextQuestion = currentQuestionIndex < quizData.questions.length - 1;
+  const handleGenderClick = () => {
+        navigate(`/${categoryId}/quize/${cat}`)
+  }
 
-    const handleNextQuestion = () => {
-        if (hasNextQuestion) {
-            setCurrentQuestionIndex(currentQuestionIndex + 1);
-        }
-    };
+  if (error) {
+    return <div className='questioncontainer'>Error loading quiz data: {error}</div>;
+  }
 
-    return (
-        <div>
-            <div>
-                <h2>{quizData.questions[currentQuestionIndex].question_text}</h2>
-                <ul>
-                    {quizData.questions[currentQuestionIndex].options.map((option, optionIndex) => (
-                        <li key={optionIndex}>{option}</li>
-                    ))}
-                </ul>
-            </div>
-            {hasNextQuestion && (
-                <button onClick={handleNextQuestion}>
-                    Next Question
-                </button>
-            )}
-        </div>
-    );
+  if (!quizData) {
+    return <div className='questioncontainer'>Loading...</div>;
+  }
+
+  return (
+    <div className='questioncontainer'>
+      <Link to='/login'>login</Link>
+        {quizData.category_name}
+      <div>
+        <button onClick={() => handleGenderClick()}>Male</button>
+        <button onClick={() => handleGenderClick()}> Female</button>
+        <button onClick={() => handleGenderClick()}> Others</button>
+      </div>
+    </div>
+  );
 }

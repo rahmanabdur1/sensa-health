@@ -8,8 +8,8 @@
       "language": "Idioma"
     },
     "banner": {
-      "heading":"Sua saúde mental é importante - Sensa dá a você as ferramentas para ajudar a melhorá-la",
-      "category-heading": "Com o que você está lutando mais no momento?"
+      "heading":"A sua saúde mental é importante – Sensa dá-lhe as ferramentas para o ajudar a melhorá-la",
+      "category-heading": "Com o que você está mais lutando agora?"
     },
     "sencaCategory": {
       "loading": "Carregando...",
@@ -21,7 +21,7 @@
       "fatigue / exhaustion": "Fadiga / Exaustão",
       "social anxiety": "Ansiedade social",
       "ptsd": "TEPT",
-      "asd": "Transtorno do espectro autista",
+      "asd": "TEA",
       "disorganization": "Desorganização"
     },
     "sensaInfo": {
@@ -57,7 +57,7 @@
     
   "footer": {
     "heading": "sensa.saúde",
-    "disclaimer": "Aviso Legal: Os resultados podem variar devido a diferenças individuais...",
+    "disclaimer": "Isenção de responsabilidade: os resultados podem variar devido a diferenças individuais. Além disso, aplicativos de autoajuda mental como o Sensa não substituem ou são uma forma de terapia, nem se destinam a curar, tratar ou diagnosticar condições médicas, incluindo condições psiquiátricas. Consulte um profissional de saúde qualificado para obter um plano de tratamento médico.",
     "rightsReserved": "© 2023 Sensa. Todos os direitos reservados.",
     "mySubscription": "Minha Assinatura",
     "contacts": "Contatos",

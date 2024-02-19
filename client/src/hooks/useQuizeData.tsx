@@ -3,7 +3,6 @@ import  { useEffect, useState } from 'react';
 
 interface QuizData {
   category_name: string;
-  category_id: number;
   questions: Array<Question>;
 }
 
@@ -13,14 +12,14 @@ interface Question {
   correct_option: number | null;
 }
 
-export function useQuizData(categoryId: number) {
+export function useQuizData(categoryId: string) {
   const [quizData, setQuizData] = useState<QuizData | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/procrastination/${categoryId}`);
+        const response = await fetch(`http://localhost:5000/${categoryId}`);
         if (!response.ok) {
           throw new Error('Failed to fetch data');
         }
