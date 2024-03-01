@@ -4,12 +4,16 @@ import { useEffect, useState } from 'react';
     options: QuizOption[]
     questionId: number;
     question_text: string;
+    question_img?:string;
+    question_des:string;
+    question_shot_des:string
   }
 
   type QuizOption=string;
 
 export function useQuizeQuestion(categoryId:string, currentQuestionInd: number) {
   const [currentQuestion, setcurrentQuestion] = useState<Question | null>(null);
+  console.log(currentQuestion,'ccc')
   const [errors, setError] = useState<string | null>(null);
 
   useEffect(() => {

@@ -1,13 +1,20 @@
-import  { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 
 interface QuizData {
   category_name: string;
+  category_text: string;
+  category_des: string;
+  img: string;
+  category_id: number;
+  category_rating: string;
   questions: Array<Question>;
 }
 
 interface Question {
   question_text: string;
+  
+question_img:string
   options: Array<string>;
   correct_option: number | null;
 }

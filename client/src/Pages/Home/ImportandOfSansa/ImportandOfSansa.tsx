@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { useTranslation } from 'react-i18next';
 import style from './ImportantOfSansa.module.css';
 import app from '../../../assets/images/app.jpg';
